@@ -1,0 +1,136 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     background-color: rgb(43, 110, 110);
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Hide the checkbox */
+.menu-toggle {
+    display: none;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff6b6b;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+/* Hamburger Animation when Checkbox is Checked */
+.menu-toggle:checked ~ .hamburger .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle:checked ~ .hamburger .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked ~ .hamburger .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease;
+        gap: 0;
+        padding: 2rem 0;
+    }
+    
+    /* Show menu when checkbox is checked */
+    .menu-toggle:checked ~ .nav-menu {
+        left: 0;
+    }
+    
+    .nav-item {
+        padding: 1rem 0;
+    }
+    
+    .nav-link {
+        font-size: 1.2rem;
+    }
+}
+
+/* Main Content */
+main {
+    margin-top: 100px;
+    padding: 2rem;
+    text-align: center;
+}
+
+main h1 {
+    color: #333;
+    margin-bottom: 1rem;
+}
