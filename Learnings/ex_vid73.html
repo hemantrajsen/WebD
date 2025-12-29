@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Website Builder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        .container {
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            padding: 8px;
+            margin: 2px;
+        }
+        
+        .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 7px;
+            padding: 5px;
+            border: 1px solid grey;
+        }
+
+        .image img {
+            border-radius: 8px;
+        }
+
+        .image {
+            position: relative;
+        }
+
+        .capsule {
+            background-color: rgba(0, 0, 0, 0.765);
+            color: white;
+            position: absolute;
+            z-index: 10;
+            bottom: 5px;
+            right: 2px;
+            padding: 2px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .text {
+            color: white;
+            font-family: "Roboto, Arial,sans-serif";
+            font-weight: 400;
+            font-size: 18px;
+            Line-height: 26px;
+        }
+
+        .text h1 {
+            padding: 8px 0;
+        }
+
+        .text p {
+            padding-bottom: 42px;
+            padding-top: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+       
+    </div>
+    <script>
+        console.log("Hemant Sir has arrived on work!");
+        function createCard(title, cName , views, monthsOld, duration, thumbnail){
+            let Nuviews
+            if(views<1000){
+                Nuviews = views;
+            }
+            else if(views>1000000){
+                Nuviews = views/1000000 + "M";
+            }
+            else {
+                Nuviews = views/1000 + "K";
+            }
+
+            let html = `<div class="card">
+            <div class="image">
+                <img src="${thumbnail}"
+                    alt="Thumbnail">
+                <p class="capsule">${duration}</p>
+            </div>
+            <div class="text">
+                <h1>${title}</h1>
+                <p>${cName} . ${Nuviews} views .  ${monthsOld} months old</p>
+            </div>
+        </div>`
+
+        document.querySelector(".container").innerHTML += html;
+
+        }
+        createCard("Introduction to Backend | Sigma Web Dev video #2", "CodeWithHarry", 560000, 7, "31:22", "https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw")
+        createCard("How I Achieved Everything In My Life", "Innovate w/ Hemant", 100000000, 1, "10:08", " ")
+    </script>
+</body>
+</html>

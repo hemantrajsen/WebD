@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video 70 Exercise</title>
+    <style>
+        .body {
+            margin: 0;
+            padding: 0;
+            background: #3E5151;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #DECBA4, #3E5151);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #DECBA4, #3E5151);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 23px;
+           background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            height: 300px;
+
+        }
+
+        .box {
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="#1" class="box">Box 1</div>
+        <div id="#2" class="box">Box 2</div>
+        <div id="#3" class="box">Box 3</div>
+        <div id="#4" class="box">Box 4</div>
+        <div id="#5" class="box">Box 5</div>
+    </div>
+    <script>
+        // let rand = Math.random();
+        // if(rand < 0.2){
+        //     document.getElementById("#1").style.backgroundColor="red";
+        //     document.getElementById("#1").style.color="white";
+        //     document.getElementById("#2").style.backgroundColor="grey";
+        //     document.getElementById("#2").style.color="black";
+        //     document.getElementById("#3").style.backgroundColor="pink";
+        //     document.getElementById("#3").style.color="white";
+        //     document.getElementById("#4").style.backgroundColor="azure";
+        //     document.getElementById("#4").style.color="black";
+        //     document.getElementById("#5").style.backgroundColor="green";
+        //     document.getElementById("#5").style.color="white";
+        // }
+        // else if(rand > 0.2 && rand < 0.4){
+        //     document.getElementById("#1").style.backgroundColor="black";
+        //     document.getElementById("#1").style.color="white";
+        //     document.getElementById("#2").style.backgroundColor="grey";
+        //     document.getElementById("#2").style.color="white";
+        //     document.getElementById("#3").style.backgroundColor="azure";
+        //     document.getElementById("#3").style.color="black";
+        //     document.getElementById("#4").style.backgroundColor="pink";
+        //     document.getElementById("#4").style.color="black";
+        //     document.getElementById("#5").style.backgroundColor="red";
+        //     document.getElementById("#5").style.color="white";
+        // }
+        // else if(rand > 0.4 && rand < 0.6){
+        //     document.getElementById("#1").style.backgroundColor="brown";
+        //     document.getElementById("#1").style.color="white";
+        //     document.getElementById("#2").style.backgroundColor="bisque";
+        //     document.getElementById("#2").style.color="black";
+        //     document.getElementById("#3").style.backgroundColor="green";
+        //     document.getElementById("#3").style.color="white";
+        //     document.getElementById("#4").style.backgroundColor="azure";
+        //     document.getElementById("#4").style.color="black";
+        //     document.getElementById("#5").style.backgroundColor="orange";
+        //     document.getElementById("#5").style.color="white";
+        // }
+        // else if(rand > 0.6 && rand < 0.8){
+        //     document.getElementById("#1").style.backgroundColor="voilet";
+        //     document.getElementById("#1").style.color="white";
+        //     document.getElementById("#2").style.backgroundColor="grey";
+        //     document.getElementById("#2").style.color="black";
+        //     document.getElementById("#3").style.backgroundColor="bisque";
+        //     document.getElementById("#3").style.color="black";
+        //     document.getElementById("#4").style.backgroundColor="purple";
+        //     document.getElementById("#4").style.color="white";
+        //     document.getElementById("#5").style.backgroundColor="yellow";
+        //     document.getElementById("#5").style.color="black";
+        // }
+        // else if(rand > 0.8 && rand < 1.0){
+        //     document.getElementById("#1").style.backgroundColor="purple";
+        //     document.getElementById("#1").style.color="white";
+        //     document.getElementById("#2").style.backgroundColor="blue";
+        //     document.getElementById("#2").style.color="white";
+        //     document.getElementById("#3").style.backgroundColor="black";
+        //     document.getElementById("#3").style.color="white";
+        //     document.getElementById("#4").style.backgroundColor="orange";
+        //     document.getElementById("#4").style.color="black";
+        //     document.getElementById("#5").style.backgroundColor="azure";
+        //     document.getElementById("#5").style.color="black";
+        // }
+
+        // const bg = ["red","brown","black","azure","bisque","voilet","purple","orange","yellow"];
+        // const tc = ["black","white","grey","purple","blue","orange"];
+
+        // let size = bg.length;
+        // let s2 = tc.length;
+        // let random = Math.random();
+        // document.querySelectorAll(".box").forEach(e=>{
+        //         e.style.backgroundColor = `${eval(`bg/size`)}`;
+
+        // })
+
+        document.querySelectorAll(".box").forEach(e => {
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            e.style.backgroundColor = `rgb(${r},${g},${b})`;
+        })
+
+    </script>
+</body>
+
+</html>
